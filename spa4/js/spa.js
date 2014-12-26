@@ -6,9 +6,11 @@
 // Module /spa/
 // Provide chat slider capability
 var spa = (function(){
+	'use strict';
 	  // Module scope variables
-  var initModule = function($container){
-	  spa.shell.initModule($container);
-	  };
-  return {initModule : initModule};
+	var initModule = function($container){
+		spa.model.initModule();
+		spa.shell.initModule($container);
+	};
+	return {initModule : initModule};
 }());
